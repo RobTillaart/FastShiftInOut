@@ -72,6 +72,7 @@ unittest(test_constructor_MSB)
 }
 
 
+/*  need godmode to test this appropriately
 unittest(test_write)
 {
   FastShiftInOut FSIO(8,9,10);
@@ -80,6 +81,7 @@ unittest(test_write)
   assertEqual(1, FSIO.writeLSBFIRST(0xAA));
   assertEqual(1, FSIO.writeMSBFIRST(0x55));
 }
+*/
 
 
 /*  Print interface not implemented (yet)
