@@ -10,8 +10,8 @@
 
 Arduino library for (AVR) optimized shiftInOut (simultaneously).
 
-A library for FastShiftIn only - https://github.com/RobTillaart/FastShiftIn
-A library for FastShiftOut only - https://github.com/RobTillaart/FastShiftOut
+- library for FastShiftIn only - https://github.com/RobTillaart/FastShiftIn
+- library for FastShiftOut only - https://github.com/RobTillaart/FastShiftOut
 
 
 ## Description
@@ -29,7 +29,8 @@ TODO
 
 ## Interface
 
- //  bitOrder = { LSBFIRST, MSBFIRST };
+bitOrder = { LSBFIRST, MSBFIRST };
+
 - **FastShiftInOut(uint8_t dataIn, uint8_t dataOut, uint8_t clockPin, uint8_t bitOrder = LSBFIRST)**
 - **uint8_t write(uint8_t data)** reads and writes simultaneously.
 - **uint8_t lastWritten(void)** returns last written value.
@@ -52,7 +53,6 @@ See examples
 
 #### must
 - documentation
-- get functional complete
 
 #### should
 - performance measurements
