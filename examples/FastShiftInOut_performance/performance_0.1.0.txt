@@ -18,3 +18,24 @@ writeMSBFIRST: 356.36
 
 done ...
 
+=============================
+
+IDE:      1.8.19
+Board:    ESP32
+FASTSHIFTINOUT_LIB_VERSION: 0.1.0
+
+Performance - time in us
+        write: 4.37
+        write: 8.69
+        Delta: 4.32
+
+writeLSBFIRST: 4.27
+writeLSBFIRST: 8.52
+        Delta: 4.26
+
+writeMSBFIRST: 4.28
+writeMSBFIRST: 8.53
+        Delta: 4.24
+
+
+done ...

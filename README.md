@@ -24,7 +24,12 @@ VERY experimental.
 
 ## Performance
 
-TODO
+performance of **write()**
+
+|  version  |  UNO (us)  |  ESP32 (us)  |
+|:---------:|:----------:|:------------:|
+|   0.1.0   |   181.08   |     4.32     |
+|   0.1.1   |     -      |     4.32     |
 
 
 ## Interface
@@ -36,12 +41,8 @@ bitOrder = { LSBFIRST, MSBFIRST };
 - **uint8_t lastWritten(void)** returns last written value.
 - **bool setBitOrder(uint8_t bitOrder)** idem.
 - **uint8_t getBitOrder(void)** idem.
-- **uint8_t writeLSBFIRST(uint8_t data)** slightly optimized version.
+- **uint8_t writeLSBFIRST(uint8_t data)**
 - **uint8_t writeMSBFIRST(uint8_t data)**
-
-
-## Notes
-
 
 
 ## Operation

@@ -7,7 +7,7 @@
 
 #include "FastShiftInOut.h"
 
-FastShiftInOut FSIO(8, 9, 10, LSBFIRST);
+FastShiftInOut FSIO(8, 9, 0, LSBFIRST);   //  ESP32 needs other pins
 
 uint32_t start, duration1, duration2;
 
