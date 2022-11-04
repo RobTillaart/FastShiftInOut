@@ -82,14 +82,15 @@ unittest(test_write)
 }
 
 
+/*  Print interface not implemented (yet)
 unittest(test_print)
 {
-  FastShiftInOut FSIO(12, 13);
+  FastShiftInOut FSIO(8,9,10);;
 
   assertEqual(5, FSIO.print(FASTSHIFTINOUT_LIB_VERSION));
   assertEqual(7, FSIO.println(FASTSHIFTINOUT_LIB_VERSION));
 }
-
+*/
 
 unittest_main()
 
