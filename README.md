@@ -10,8 +10,8 @@
 
 Arduino library for (AVR) optimized shiftInOut (simultaneously).
 
-A library for FastShiftIn only - https://github.com/RobTillaart/FastShiftIn
-A library for FastShiftOut only - https://github.com/RobTillaart/FastShiftOut
+- library for FastShiftIn only - https://github.com/RobTillaart/FastShiftIn
+- library for FastShiftOut only - https://github.com/RobTillaart/FastShiftOut
 
 
 ## Description
@@ -24,23 +24,25 @@ VERY experimental.
 
 ## Performance
 
-TODO
+performance of **write()**
+
+|  version  |  UNO (us)  |  ESP32 (us)  |
+|:---------:|:----------:|:------------:|
+|   0.1.0   |   181.08   |     4.32     |
+|   0.1.1   |     -      |     4.32     |
 
 
 ## Interface
 
- //  bitOrder = { LSBFIRST, MSBFIRST };
+bitOrder = { LSBFIRST, MSBFIRST };
+
 - **FastShiftInOut(uint8_t dataIn, uint8_t dataOut, uint8_t clockPin, uint8_t bitOrder = LSBFIRST)**
 - **uint8_t write(uint8_t data)** reads and writes simultaneously.
 - **uint8_t lastWritten(void)** returns last written value.
 - **bool setBitOrder(uint8_t bitOrder)** idem.
 - **uint8_t getBitOrder(void)** idem.
-- **uint8_t writeLSBFIRST(uint8_t data)** slightly optimized version.
+- **uint8_t writeLSBFIRST(uint8_t data)**
 - **uint8_t writeMSBFIRST(uint8_t data)**
-
-
-## Notes
-
 
 
 ## Operation
@@ -52,7 +54,6 @@ See examples
 
 #### must
 - documentation
-- get functional complete
 
 #### should
 - performance measurements
