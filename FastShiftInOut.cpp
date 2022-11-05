@@ -19,7 +19,7 @@ FastShiftInOut::FastShiftInOut(uint8_t dataIn, uint8_t dataOut, uint8_t clockPin
   pinMode(clockPin, OUTPUT);
 
   // https://www.arduino.cc/reference/en/language/functions/advanced-io/shiftout/
-  digitalWrite(clockPin, LOW);  // assume rising pulses from clock 
+  digitalWrite(clockPin, LOW);  // assume rising pulses from clock
 
 #if defined(ARDUINO_ARCH_AVR) || defined(ARDUINO_ARCH_MEGAAVR)
 
@@ -79,10 +79,7 @@ uint8_t FastShiftInOut::writeLSBFIRST(uint8_t data)
     if ((value & m) == 0) *_dataOutRegister &= outmask2;
     else                  *_dataOutRegister |= outmask1;
     //  read one bit
-    if ((*_dataInRegister & inmask1) > 0) 
-    {
-      rv |= m;
-    }
+    if ((*_dataInRegister & inmask1) > 0) rv |= m;
     *_clockRegister &= cbmask2;
     SREG = oldSREG;
   }
@@ -131,10 +128,7 @@ uint8_t FastShiftInOut::writeMSBFIRST(uint8_t data)
     if ((value & m) == 0) *_dataOutRegister &= outmask2;
     else                  *_dataOutRegister |= outmask1;
     //  read one bit
-    if ((*_dataInRegister & inmask1) > 0) 
-    {
-      rv |= m;
-    }
+    if ((*_dataInRegister & inmask1) > 0) rv |= m;
     *_clockRegister &= cbmask2;
     SREG = oldSREG;
   }
@@ -159,17 +153,18 @@ uint8_t FastShiftInOut::writeMSBFIRST(uint8_t data)
   return rv;
 }
 
+
 uint8_t FastShiftInOut::lastWritten(void)
 {
   return _value;
 };
-  
+
 
 bool FastShiftInOut::setBitOrder(uint8_t bitOrder)
 {
   if ((bitOrder == LSBFIRST) || (bitOrder == MSBFIRST))
   {
-    _bitOrder = bitOrder; 
+    _bitOrder = bitOrder;
     return true;
   };
   return false;
@@ -178,7 +173,7 @@ bool FastShiftInOut::setBitOrder(uint8_t bitOrder)
 
 uint8_t FastShiftInOut::getBitOrder(void)
 {
-  return _bitOrder; 
+  return _bitOrder;
 };
 
 

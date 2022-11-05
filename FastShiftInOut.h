@@ -37,10 +37,10 @@ private:
 
   volatile uint8_t *_dataInRegister;
   uint8_t _dataInBit;
-  
+
   volatile uint8_t *_dataOutRegister;
   uint8_t _dataOutBit;
-  
+
   volatile uint8_t *_clockRegister;
   uint8_t _clockBit;
 
