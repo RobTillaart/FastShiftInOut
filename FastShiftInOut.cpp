@@ -77,11 +77,12 @@ uint8_t FastShiftInOut::writeLSBFIRST(uint8_t data)
     //  write one bit
     if ((value & m) == 0) *_dataOutRegister &= outmask2;
     else                  *_dataOutRegister |= outmask1;
-    //  clock pulse
+    //  clock pulse HIGH
     *_clockRegister |= cbmask1;
-    *_clockRegister &= cbmask2;
     //  read one bit
     if ((*_dataInRegister & inmask1) > 0) rv |= m;
+    //  clock pulse LOW
+    *_clockRegister &= cbmask2;
     SREG = oldSREG;
   }
   return rv;
@@ -91,12 +92,14 @@ uint8_t FastShiftInOut::writeLSBFIRST(uint8_t data)
   for (uint8_t i = 0; i < 8; i++)
   {
     // write one bit
-    digitalWrite(_clockPin, HIGH);
     digitalWrite(_dataPinOut, value & 0x01);
     value >>= 1;
+    //  clock pulse
+    digitalWrite(_clockPin, HIGH);
     //  read one bit
     rv >>= 1;
     if (digitalRead(_dataPinIn) == HIGH)  rv |= 0x80;
+    //  clock pulse
     digitalWrite(_clockPin, LOW);
   }
 
@@ -127,11 +130,12 @@ uint8_t FastShiftInOut::writeMSBFIRST(uint8_t data)
     //  write one bit
     if ((value & m) == 0) *_dataOutRegister &= outmask2;
     else                  *_dataOutRegister |= outmask1;
-    //  clock pulse
+    //  clock pulse HIGH
     *_clockRegister |= cbmask1;
-    *_clockRegister &= cbmask2;
     //  read one bit
     if ((*_dataInRegister & inmask1) > 0) rv |= m;
+    //  clock pulse LOW
+    *_clockRegister &= cbmask2;
     SREG = oldSREG;
   }
   return rv;
@@ -141,12 +145,14 @@ uint8_t FastShiftInOut::writeMSBFIRST(uint8_t data)
   for (uint8_t i = 0; i < 8; i++)
   {
     // write one bit
-    digitalWrite(_clockPin, HIGH);
     digitalWrite(_dataPinOut, value & 0x80);
     value <<= 1;
+    //  clock pulse
+    digitalWrite(_clockPin, HIGH);
     //  read one bit
     rv <<= 1;
     if (digitalRead(_dataPinIn) == HIGH) rv |= 1;
+    //  clock pulse
     digitalWrite(_clockPin, LOW);
   }
 
