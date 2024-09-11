@@ -3,17 +3,17 @@ Board:    UNO
 FASTSHIFTINOUT_LIB_VERSION: 0.2.0
 
 Performance - time in us
-        write: 26.54
-        write: 51.94
-        Delta: 25.40
+        write: 18.74
+        write: 36.35
+        Delta: 17.61
 
-writeLSBFIRST: 25.66
-writeLSBFIRST: 51.05
-        Delta: 25.40
+writeLSBFIRST: 17.86
+writeLSBFIRST: 35.46
+        Delta: 17.61
 
-writeMSBFIRST: 25.66
-writeMSBFIRST: 51.06
-        Delta: 25.40
+writeMSBFIRST: 17.86
+writeMSBFIRST: 35.46
+        Delta: 17.60
 
 
 done ...
@@ -24,17 +24,18 @@ done ...
 FASTSHIFTINOUT_LIB_VERSION: 0.2.0
 
 Performance - time in us
-        write: 20.19
-        write: 39.23
-        Delta: 19.04
+        write: 13.40
+        write: 25.65
+        Delta: 12.26
 
-writeLSBFIRST: 19.31
-writeLSBFIRST: 38.36
-        Delta: 19.05
+writeLSBFIRST: 12.52
+writeLSBFIRST: 24.77
+        Delta: 12.26
 
-writeMSBFIRST: 19.24
-writeMSBFIRST: 38.23
-        Delta: 18.98
+writeMSBFIRST: 12.45
+writeMSBFIRST: 24.65
+        Delta: 12.20
 
 
 done ...
+

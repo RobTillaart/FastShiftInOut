@@ -65,15 +65,15 @@ Indicative time in microseconds, Arduino UNO, IDE 1.8.19, measured over 1000 cal
 |  function                |   0.1.3  |   0.2.0  |   0.2.0L  |
 |:-------------------------|---------:|---------:|----------:|
 |  write() (reference)     | no data  |  158.24  |  no data  |
-|  write()                 |   25.52  |   25.40  |    19.04  |
-|  writeLSBFIRST()         |   25.52  |   25.40  |    19.05  |
-|  writeMSBFIRST()         |   25.52  |   25.40  |    18.98  |
+|  write()                 |   25.52  |   17.61  |    12.26  |
+|  writeLSBFIRST()         |   25.52  |   17.61  |    12.26  |
+|  writeMSBFIRST()         |   25.52  |   17.60  |    12.20  |
 
 
 - Note: 0.1.3 added from old table.
 - Note: reference run on AVR by commenting all optimizations.
 - Note: 0.2.0 measured with loop unroll flag disabled.
-- Note: 0.2.0L measured with loop unrolled flag enabled. (~25% faster)
+- Note: 0.2.0L measured with loop unrolled flag enabled.
 
 
 ### Related
